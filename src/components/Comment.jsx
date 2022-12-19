@@ -5,7 +5,7 @@ export function Comment() {
   return (
     <div className={styles.comment}>
       <img
-        className={styles.cover}
+        className={styles.avatar}
         src="https://images.unsplash.com/photo-1587620931276-d97f425f62b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
       />
       <div className={styles.commentBox}>
@@ -21,7 +21,7 @@ export function Comment() {
               </time>
             </div>
             <button title="Deletar comentário">
-              <Trash size={20} />
+              <Trash size={24} />
             </button>
           </header>
           <p>Muito bom Sávio, parabéns!! 👏👏</p>
@@ -29,7 +29,7 @@ export function Comment() {
         <footer>
           <button>
             <ThumbsUp size={20} />
-            Aplaudir <samp>20</samp>
+            Aplaudir <span>20</span>
           </button>
         </footer>
       </div>

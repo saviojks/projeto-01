@@ -13,10 +13,10 @@ export function Post() {
             <strong>Sávio jks</strong>
             <span>Web Developer</span>
           </div>
-          <time title="19 de dezembro as 12:13h" dateTime="2022-12-19 12:13:14">
-            Publicado há 1h
-          </time>
         </div>
+        <time title="19 de dezembro as 12:13h" dateTime="2022-12-19 12:13:14">
+          Publicado há 1h
+        </time>
       </header>
       <div className={styles.content}>
         <p> Fala galeraa 👋</p>
@@ -26,8 +26,13 @@ export function Post() {
         <p>
           no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
         </p>
-        <p>👉 jane.design/doctorcare</p>
-        <p>#novoprojeto #nlw #rocketseat</p>
+        <p>
+          <a href="#"> jane.design/doctorcare</a>{" "}
+        </p>
+        <p>
+          <a href="#">#novoprojeto</a> <a href="#">#nlw </a>{" "}
+          <a href="#">#rocketseat</a>
+        </p>
       </div>
     </article>
   );

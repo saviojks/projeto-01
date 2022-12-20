@@ -1,0 +1,52 @@
+import { ThumbsUp, Trash } from "phosphor-react";
+import { useState } from "react";
+import { Avatar } from "./Avatar";
+import styles from "./Comment.module.css";
+
+interface IComment {
+  content: string;
+  onDeleteComment: (comment: string) => void
+}
+
+export function Comment({ content, onDeleteComment }: IComment) {
+  const [likeCount, setLikesCount] = useState(0);
+
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
+
+  function handleLikeComment() {
+    setLikesCount((state) => state + 1);
+  }
+
+  return (
+    <div className={styles.comment}>
+      <Avatar hasBorder={false} src="https://github.com/diego3.png" />
+      <div className={styles.commentBox}>
+        <div className={styles.commentContent}>
+          <header>
+            <div className={styles.authorAndTime}>
+              <strong>Sávio jks</strong>
+              <time
+                title="19 de dezembro as 12:13h"
+                dateTime="2022-12-19 12:13:14"
+              >
+                Cerca há 1h atrás
+              </time>
+            </div>
+            <button onClick={handleDeleteComment} title="Deletar comentário">
+              <Trash size={24} />
+            </button>
+          </header>
+          <p>{content}</p>
+        </div>
+        <footer>
+          <button onClick={handleLikeComment}>
+            <ThumbsUp size={20} />
+            Aplaudir <span>{likeCount}</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+  );
+}

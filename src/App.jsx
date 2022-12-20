@@ -27,7 +27,7 @@ const posts = [
       { type: "link", content: "#novoprojeto" },
       { type: "link", content: "#nlw 👋" },
     ],
-    publishedAt: new Date("2022-12-16T18:08:10.786Z"),
+    publishedAt: new Date("2022-12-20T11:03:10.786Z"),
   },
   {
     id: "01d8ca39-9fa6-4d44-a7e6-226ca1a8bd06",
@@ -37,20 +37,19 @@ const posts = [
       role: "Web Developer",
     },
     content: [
-      { type: "paragraph", content: "Fala galeraa 👋" },
+      { type: "paragraph", content: "Fala pessoal 👋" },
       {
         type: "paragraph",
         content:
-          " Acabei de subir mais um projeto no meu portifa. É um projeto que fiz",
+          " Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻 ",
       },
       {
         type: "paragraph",
-        content:
-          "no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+        content: "Acesse e deixe seu feedback 👉",
       },
-      { type: "link", content: "jane.design/doctorcare" },
-      { type: "link", content: "#novoprojeto" },
-      { type: "link", content: "#nlw 👋" },
+      { type: "link", content: " devonlane.design" },
+      { type: "link", content: " #uiux " },
+      { type: "link", content: " #userexperience" },
     ],
     publishedAt: new Date("2022-12-16T18:18:37.053Z"),
   },
@@ -64,7 +63,13 @@ function App() {
         <Sidebar />
         <main>
           {posts.map((post) => {
-            return <Post author={post.author} content={post.content} />;
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            );
           })}
         </main>
       </div>

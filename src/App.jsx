@@ -6,8 +6,6 @@ import { Post } from "./components/Post";
 const posts = [
   {
     id: "0ed5d3d0-ea69-4c4d-a21d-6a38a8d68925",
-    email: "saviojks@gmail.com",
-    level: 1,
     author: {
       name: "Sávio jks",
       avatarUrl: "http://github.com/saviojks.png",
@@ -33,8 +31,6 @@ const posts = [
   },
   {
     id: "01d8ca39-9fa6-4d44-a7e6-226ca1a8bd06",
-    email: "saviojks@gmail.com",
-    level: 1,
     author: {
       name: "Diego #",
       avatarUrl: "http://github.com/diego3.png",
